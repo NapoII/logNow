@@ -1,96 +1,55 @@
-py_name = "EZLog" 
-v = "0.0.1"
-####################################################################################################
-# #   Intro
+"""EzLog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 
-f0 =  """ 
+With "EzLog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
-††††††††††††††††††††††......††††††††††††††††††††††
-†††††††††††††††††††.::+++++++:,.††††††††††††††††††
-†††††††††††††††††,:+++++++++++++:.††††††††††††††††
-††††††††††††††††:+++++++++++++++++.†††††††††††††††
-†††††††††††††††,++,,:++++++++++++++.††††††††††††††
-††††††††††††††.++:†††:+++++++++++++,††††††††††††††
-††††††††††††††.++,†††,+++++++++++++,††††††††††††††
-††††††††††††††.++:.†.:+++++++++++++,††††††††††††††
-††††††††††††††.+++::+++++++++++++++,††††††††††††††
-††††††††††††††.++++++++++++++++++++,††††††††††††††
-††††††††††††††.::::::::::++++++++++,††††††††††††††
-†††††††††††††††††††††††††:+++++++++,††††††††††††††
-†††††††,:::::::::::::::::++++++++++,.:::::,.††††††
-††††††:++++++++++++++++++++++++++++,.:::::::.†††††
-†††††,+++++++++++++++++++++++++++++,.::::::::.††††
-††††.++++++++++++++++++++++++++++++,.::::::::,††††
-††††,++++++++++++++++++++++++++++++,.:::::::::††††
-††††:++++++++++++++++++++++++++++++..:::::::::.†††
-†††.++++++++++++++++++++++++++++++:†,:::::::::,†††
-†††.++++++++++++++++++++++++++++++..::::::::::,†††
-†††,+++++++++++++++++++++++++++++..::::::::::::†††
-†††,++++++++++++++:::::::::::::,..:::::::::::::†††
-†††,++++++++++++:.††††††††††††..,::::::::::::::†††
-†††,+++++++++++,†.,::::::::::::::::::::::::::::†††
-†††,++++++++++:†,:::::::::::::::::::::::::::::,†††
-†††.++++++++++.,::::::::::::::::::::::::::::::,†††
-†††.+++++++++:†:::::::::::::::::::::::::::::::,†††
-††††:++++++++:.:::::::::::::::::::::::::::::::.†††
-††††,++++++++:.:::::::::::::::::::::::::::::::††††
-††††.++++++++:.::::::::::::::::::::::::::::::.††††
-†††††,+++++++:.:::::::::::::::::::::::::::::,†††††
-††††††,++++++:.:::::::::::::::::::::::::::::.†††††
-†††††††.,::::,.::::::::::,,,,,,,,,,,,,,,,,.†††††††
-††††††††††††††.::::::::::.††††††††††††††††††††††††
-††††††††††††††.::::::::::::::::::::,††††††††††††††
-††††††††††††††.::::::::::::::::::::,††††††††††††††
-††††††††††††††.:::::::::::::::,,:::,††††††††††††††
-††††††††††††††.::::::::::::::.††.::,††††††††††††††
-††††††††††††††.::::::::::::::††††::,††††††††††††††
-†††††††††††††††::::::::::::::.††.::.††††††††††††††
-†††††††††††††††.::::::::::::::,,::,†††††††††††††††
-††††††††††††††††,::::::::::::::::,.†††††††††††††††
-†††††††††††††††††.,:::::::::::::.†††††††††††††††††
-†††††††††††††††††††..,,:::::,,.†††††††††††††††††††
-††††††††††††††††††††††††††††††††††††††††††††††††††
+In addition to its core functionality, "EzLog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
 
-- """ + py_name + """
-- created by Napo_II
-- """ + v + """
-- python 3.10.7
-- https://github.com/NapoII/
 
-"""
-print(" \nProgramm wird gestartet ...")
-
-####################################################################################################
-#import
-
+from functions import *
+import sys
 import os
-import os, sys
-import time
-import pyautogui
-from Imports import*
 
-################################################################################################################################
-#PreSet Programm
+def test():
 
-file_path = os.path.dirname(sys.argv[0])
-file_path_Bilder = file_path + "/Bilder/"
-file_path_Work_Folder = file_path + "/Work_Folder/"
+    folder_path_EZLog = os.path.abspath(os.path.dirname(__file__))+ os.path.sep 
+    print(folder_path_EZLog)
+    config_dir = folder_path_EZLog + "config.ini"
+    print(config_dir)
+    x = Read_File_Out(folder_path_EZLog + "Log_top_img.ascii")
+    print(x)
+    print(TimeStemp())
 
 
-Doku_Folder = Folder_gen (py_name, "Documents/")
-Log_Folder = Folder_gen ("Log", ("Documents/"+str(py_name)))
-Log_File_name = Datei_name_mit_Zeit ("LogFile-"+str(py_name))
-Log_File = Erstelle_TextDatei (Log_File_name, Log_Folder, f0 + "Log-File:\n---------------------------------------------------------------------------------------\n")
+    # Der Name der auszuf√ºhrenden Datei wird in der Variable "filename" gespeichert.
+    filename = os.path.basename(sys.argv[0])
+    print("Der Name der auszuf√ºhrenden Datei lautet: ", filename)
 
-Bot_Path = os.path.dirname(sys.argv[0])
-config_dir = file_path +"/config.ini"
 
-log ( "Bot_Path: ["+str(Bot_Path) + "]\n")
+def EZLog_Start():
 
-################################################################################################################################
-# Load Config
+    # Log Folder wird generiert:
+    filename = os.path.basename(sys.argv[0])
+    file_path = os.path.dirname(sys.argv[0])
+    os_name = get_os_name()
+    folder_path_EZLog = os.path.abspath(os.path.dirname(__file__))+ os.path.sep 
+    
+    
+    # If in the .ini log_folder_dir = default then log folder = file folder:
 
-# x = read_config(config_dir, section, option)
+    config_dir = folder_path_EZLog +"config.ini"
+    log_folder_dir = read_config(config_dir, "folder", "log_folder_dir")
 
-################################################################################################################################
-# Main Programm
+    if str(log_folder_dir) == "default":
+        log_folder_dir = file_path
+        
+    log_folder_dir = Folder_gen("log", log_folder_dir )
+
+    # create Log file:
+
+    Log_filename = f"Log_{File_name_with_time(filename)}"
+    
+    ascii = Read_File_Out(folder_path_EZLog + "Log_top_img.ascii")
+    Create_TextFile( Log_filename, log_folder_dir, ascii )
+    
+# EZLog_Start()
+
