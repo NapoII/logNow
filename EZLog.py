@@ -26,8 +26,11 @@ def test():
 
 
 def EZLog_Start():
+    """Starts the EZLog module by creating a log folder and log file with a time-stamped name.
 
-    # Log Folder wird generiert:
+    Returns:
+    str: The path of the created log file."""
+
     filename = os.path.basename(sys.argv[0])
     file_path = os.path.dirname(sys.argv[0])
     os_name = get_os_name()
