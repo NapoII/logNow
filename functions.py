@@ -41,7 +41,6 @@ def get_os_name():
     else:
         return('Operating system not recognized')
 
-    
 
 def read_config(config_dir, section, option):
     """Reads a specific option from a config file in a specific section
