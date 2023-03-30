@@ -16,6 +16,8 @@ filename = os.path.basename(sys.argv[0])
 file_path = os.path.dirname(sys.argv[0])
 folder_path_EZLog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
 Log_File = f"Log_{File_name_with_time(filename)}"
+os_name = get_os_name()
+User = os.getlogin()
 
 ## If in the .ini log_folder_dir = default then log folder = file folder:
 config_dir = folder_path_EZLog + "config.ini"
@@ -40,13 +42,13 @@ while True:
         ascii_max_width_minus = len_b
 ascii_max_width_minus = ascii_max_width_minus*"-"
 Log_File = Create_TextFile(Log_filename, log_folder_dir, ascii)
-Log_into_text = f"{ascii_max_width_minus}\n{filename} was executed at {TimeStemp()}"
+Log_into_text = f"{ascii_max_width_minus}\nstart:            {TimeStemp()}\nfile:             {filename}\nOS:               {os_name}\nUser:             {User}\n{ascii_max_width_minus}\nLog:\n"
 
 Fill_Datei(Log_File,Log_into_text , "a")
 
 
 ### var log data
-os_name = get_os_name()
+
 
 
 def test():
