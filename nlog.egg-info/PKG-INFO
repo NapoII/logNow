@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: nlog
+Version: 0.1.0
+Summary: nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+Home-page: https://github.com/NapoII/nlog
+Author: Napo_II
+Author-email: Napo_the_II@protonmail.com
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Documentation
+Classifier: Topic :: Printing
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System
+Classifier: Topic :: System :: Console Fonts
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: System :: Operating System
+Classifier: Topic :: Utilities
+License-File: LICENSE
