@@ -1,9 +1,14 @@
 from setuptools import setup, find_packages
 
+with open("README.md") as readme_file:
+    readme = readme_file.read()
+
 setup(
     name='logNow',
-    version='0.2.2',    
-    description='logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.',
+    version='0.2.4',    
+    description=('logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.'),
+    long_description = readme,
+    long_description_content_type="text/markdown",
     url='https://github.com/NapoII/logNow',
     author='Napo_II',
     author_email='Napo_the_II@protonmail.com',

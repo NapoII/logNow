@@ -22,5 +22,5 @@ from .logNow import *
 
 
 
-__version__ = "0.2.2"
+__version__ = "0.2.4"
 __author__ = 'Napo_II'

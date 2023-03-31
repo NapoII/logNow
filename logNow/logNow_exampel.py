@@ -7,7 +7,7 @@ With "logNow", developers can easily create custom log messages and output them 
 In addition to its core functionality, "logNow" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
 
 
-# to use you just need both import and log("a str")
+# To use logNow, you only need to import and write log("a str")
 
 import logNow
 from logNow import log
