@@ -11,7 +11,7 @@ import sys
 from functions import *
 
 
-#Pre var
+# Pre var
 filename = os.path.basename(sys.argv[0])
 file_path = os.path.dirname(sys.argv[0])
 folder_path_EZLog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
@@ -19,7 +19,7 @@ Log_File = f"Log_{File_name_with_time(filename)}"
 os_name = get_os_name()
 User = os.getlogin()
 
-## If in the .ini log_folder_dir = default then log folder = file folder:
+# If in the .ini log_folder_dir = default then log folder = file folder:
 config_dir = folder_path_EZLog + "config.ini"
 log_folder_dir = read_config(config_dir, "folder", "log_folder_dir")
 if str(log_folder_dir) == "default":
@@ -34,7 +34,7 @@ len_a = 0
 while True:
     if len(lines) == 0:
         break
-    
+
     len_b = len(lines.pop())
     if len_b > len_a:
         ascii_max_width_minus = len_b
@@ -42,49 +42,41 @@ ascii_max_width_minus = ascii_max_width_minus*"-"
 Log_File = Create_TextFile(Log_filename, log_folder_dir, ascii)
 Log_into_text = f"{ascii_max_width_minus}\nstart:            {TimeStemp()}\nfile:             {filename}\nOS:               {os_name}\nUser:             {User}\n{ascii_max_width_minus}\nLog:\n"
 
-Fill_Datei(Log_File,Log_into_text , "a")
+Fill_Datei(Log_File, Log_into_text, "a")
 
-
-### var log data
-
-
-
-def test():
-
-    folder_path_EZLog = os.path.abspath(
-        os.path.dirname(__file__)) + os.path.sep
-    print(folder_path_EZLog)
-    config_dir = folder_path_EZLog + "config.ini"
-    print(config_dir)
-    x = Read_File_Out(folder_path_EZLog + "Log_top_img.ascii")
-    print(x)
-    print(TimeStemp())
-
-    # Der Name der auszuführenden Datei wird in der Variable "filename" gespeichert.
-    filename = os.path.basename(sys.argv[0])
-    print("Der Name der auszuführenden Datei lautet: ", filename)
 
 def log(Log_input, colour=None):
+    """
+    This function logs the input message to a Logfile and prints it to the console with an optional color.
+    colour = red, green, blue, yellow or none
 
+    Parameters:
+    Log_input (str): The message to be logged.
+    colour (str, optional): The color to be used for printing the message. It can be one of "r", "red", "g", "green", "b", "blue", "y", "yellow". Default is None.
+
+    Returns:
+    None
+    """
     colour = str(colour).lower()
 
     if colour == "r" or colour == "red":
         Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.RED +Log_input + bcolors.ENDC +"\n")
+        print(bcolors.TIME + TimeStemp() + " --> " + bcolors.ENDC +
+              bcolors.RED + Log_input + bcolors.ENDC + "\n")
     if colour == "g" or colour == "green":
         Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.GREEN +Log_input + bcolors.ENDC +"\n")
+        print(bcolors.TIME + TimeStemp() + " --> " + bcolors.ENDC +
+              bcolors.GREEN + Log_input + bcolors.ENDC + "\n")
     if colour == "b" or colour == "blue":
         Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.BLUE +Log_input + bcolors.ENDC +"\n")
+        print(bcolors.TIME + TimeStemp() + " --> " + bcolors.ENDC +
+              bcolors.BLUE + Log_input + bcolors.ENDC + "\n")
     if colour == "y" or colour == "yellow":
         Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.YELLOW +Log_input + bcolors.ENDC +"\n")
-    
-    if colour not in ["r", "red", "g","green","b","blue","y","yellow"]:
+        print(bcolors.TIME + TimeStemp() + " --> " + bcolors.ENDC +
+              bcolors.YELLOW + Log_input + bcolors.ENDC + "\n")
 
-        
-        
+    if colour not in ["r", "red", "g", "green", "b", "blue", "y", "yellow"]:
         Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + Log_input +"\n")
-
+        print(bcolors.TIME + TimeStemp() + " --> " +
+              bcolors.ENDC + Log_input + "\n")

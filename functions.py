@@ -240,7 +240,37 @@ def File_name_with_time(FileName):
 
     return FullName
 
+
 class bcolors:
+    """
+    This class defines ANSI escape sequences for text color and formatting in the console.
+
+    Attributes:
+    TIME (str): Gray color for displaying timestamps.
+    HEADER (str): Pink color for displaying headers.
+    OKBLUE (str): Blue color for displaying information messages.
+    OKGREEN (str): Green color for displaying success messages.
+    WARNING (str): Yellow color for displaying warning messages.
+    FAIL (str): Red color for displaying error messages.
+    ENDC (str): Resets color and formatting back to default.
+    BOLD (str): Bold text formatting.
+    UNDERLINE (str): Underlined text formatting.
+    RED (str): Red text color.
+    GREEN (str): Green text color.
+    YELLOW (str): Yellow text color.
+    BLUE (str): Blue text color.
+    MAGENTA (str): Magenta text color.
+    CYAN (str): Cyan text color.
+    WHITE (str): White text color.
+    BG_RED (str): Red background color.
+    BG_GREEN (str): Green background color.
+    BG_YELLOW (str): Yellow background color.
+    BG_BLUE (str): Blue background color.
+    BG_MAGENTA (str): Magenta background color.
+    BG_CYAN (str): Cyan background color.
+    BG_WHITE (str): White background color.
+    BG_WHITE (str): White text color.
+    """
     TIME = '\033[90m'
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -248,7 +278,7 @@ class bcolors:
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
-    
+
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     RED = '\033[31m'
@@ -258,7 +288,7 @@ class bcolors:
     MAGENTA = '\033[35m'
     CYAN = '\033[36m'
     WHITE = '\033[37m'
-    
+
     BG_RED = '\033[41m'
     BG_GREEN = '\033[42m'
     BG_YELLOW = '\033[43m'
@@ -269,5 +299,15 @@ class bcolors:
     BG_WHITE = '\033[38m'
 
     @staticmethod
+    
     def end():
+        """
+        This static method prints the ENDC escape sequence to reset color and formatting back to default.
+
+        Parameters:
+        None
+
+        Returns:
+        None
+        """
         print(bcolors.ENDC)
