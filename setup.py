@@ -40,4 +40,4 @@ setup(
         'Topic :: System :: Logging',
         'Topic :: System :: Operating System',
         'Topic :: Utilities',
-        ],
+        ],)
