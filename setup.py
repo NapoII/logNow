@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='nlog',
-    version='0.1.0',    
-    description='nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.',
-    url='https://github.com/NapoII/nlog',
+    name='logNow',
+    version='0.2.2',    
+    description='logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.',
+    url='https://github.com/NapoII/logNow',
     author='Napo_II',
     author_email='Napo_the_II@protonmail.com',
     license='MIT License',

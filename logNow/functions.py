@@ -1,13 +1,16 @@
-"""nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+"""Full Doku on: https://github.com/NapoII/logNow
+-----------------------------------------------
+logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 
-With "nlog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
+With "logNow", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
-In addition to its core functionality, "nlog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
+In addition to its core functionality, "logNow" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
+
 import os
 import time
 
-folder_path_nlog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
-config_dir = folder_path_nlog + "config.ini"
+folder_path_logNow = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
+config_dir = folder_path_logNow + "config.ini"
 
 
 def get_os_name():

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+logNow/__init__.py
+logNow/functions.py
+logNow/logNow.py
+logNow/logNow_exampel.py
+logNow.egg-info/PKG-INFO
+logNow.egg-info/SOURCES.txt
+logNow.egg-info/dependency_links.txt
+logNow.egg-info/top_level.txt

@@ -1,18 +1,29 @@
-"""nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+"""Full Doku on: https://github.com/NapoII/logNow
+-----------------------------------------------
+USE: You need both imports:
 
-With "nlog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
+import logNow
 
-In addition to its core functionality, "nlog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
+
+from logNow import log
+
+------------------------------------------------
+logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+
+With "logNow", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
+
+In addition to its core functionality, "logNow" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
 
 
 import os
 import sys
 
-from functions import *
+from .functions import *
 
 
 # Pre var
-ascii = """  _                   ______ _ _      
+ascii = r"""
+  _                   ______ _ _      
  | |                 |  ____(_) |     
  | |     ___   __ _  | |__   _| | ___ 
  | |    / _ \ / _` | |  __| | | |/ _ \
@@ -23,13 +34,13 @@ ascii = """  _                   ______ _ _
 """
 filename = os.path.basename(sys.argv[0])
 file_path = os.path.dirname(sys.argv[0])
-folder_path_nlog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
+folder_path_logNow = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
 Log_File = f"Log_{File_name_with_time(filename)}"
 os_name = get_os_name()
 User = os.getlogin()
 
 # If in the .ini log_folder_dir = default then log folder = file folder:
-config_dir = folder_path_nlog + "config.ini"
+config_dir = folder_path_logNow + "config.ini"
 log_folder_dir = "default"
 if str(log_folder_dir) == "default":
     log_folder_dir = file_path
@@ -49,22 +60,17 @@ while True:
         ascii_max_width_minus = len_b
 ascii_max_width_minus = ascii_max_width_minus*"-"
 Log_File = Create_TextFile(Log_filename, log_folder_dir, ascii)
-Log_into_text = f"{ascii_max_width_minus}\nstart:            {TimeStemp()}\nfile:             {filename}\nOS:               {os_name}\nUser:             {User}\n{ascii_max_width_minus}\nLog:\n"
+Log_into_text = f"{ascii_max_width_minus}\nstart:            {TimeStemp()}\nfile:             {filename}\nOS:               {os_name}\nUser:             {User}\n{ascii_max_width_minus}\nlogNow:\n"
 
 Fill_Datei(Log_File, Log_into_text, "a")
 
 
 def log(Log_input, colour=None):
-    """
-    This function logs the input message to a Logfile and prints it to the console with an optional color.
-    colour = red, green, blue, yellow or none
-
-    Parameters:
-    Log_input (str): The message to be logged.
-    colour (str, optional): The color to be used for printing the message. It can be one of "r", "red", "g", "green", "b", "blue", "y", "yellow". Default is None.
-
-    Returns:
-    None
+    """Full Doku on: https://github.com/NapoII/logNow
+    -----------------------------------------------
+    Simpel Use:     --> log("Hello World")
+    With Colours:   --> log("Hello Red World","Red")
+    --> List of all colours: Red; Green; Blue; Yellow. 
     """
     colour = str(colour).lower()
 
