@@ -1,13 +1,8 @@
 <p align="center">
 <a href="https://github.com/NapoII">
-    <img src="Readme_top.png"  alt=f"NapoII">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_top.png"  alt=f"NapoII">
 </a>
 </p>
-
-<center>
-
-# logNow
-</center>
 
 <p align="center">
 <a href="https://pypi.org/project/logNow/">
@@ -39,7 +34,8 @@
 </a>
 </p>
 
-"logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+# logNow
+is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 
 With "logNow", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
@@ -76,10 +72,10 @@ log("hello blue world", "B")
 ## Output Example
 
 <a href="https://pypi.org/project/logNow/">
-    <img src="Readme_ex1.png" alt="github/stars">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_ex1.png" alt="github/stars">
 </a>
 <a href="https://pypi.org/project/logNow/">
-    <img src="Readme_ex2.png" alt="github/stars">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_ex2.png" alt="github/stars">
 </a>
 
 ## Lizenz
@@ -87,7 +83,6 @@ log("hello blue world", "B")
 MIT License
 
 Copyright (c) 2023 NapoII
-<small><small><small>
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -105,4 +100,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE
-</small>
+
