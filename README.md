@@ -1,12 +1,6 @@
 <p align="center">
 <a href="https://github.com/NapoII">
-    <img src="work.jpg"  alt=f"NapoII">
-</a>
-</p>
-
-<p align="center">
-<a href="https://github.com/NapoII">
-    <img src="Work_Folder\Readme_top.png"  alt=f"NapoII">
+    <img src="Readme_top.png"  alt=f"NapoII">
 </a>
 </p>
 

@@ -1,15 +1,15 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='EZLog',
+    name='nlog',
     version='0.1.0',    
-    description='EzLog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.',
-    url='https://github.com/NapoII/EZLog',
+    description='nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.',
+    url='https://github.com/NapoII/nlog',
     author='Napo_II',
     author_email='Napo_the_II@protonmail.com',
     license='MIT License',
-    packages=['os','sys','time'],
-    install_requires= []
+    packages=find_packages(),
+    install_requires= [],
 
     classifiers=[
         'Development Status :: 3 - Alpha',
