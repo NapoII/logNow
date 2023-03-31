@@ -10,28 +10,28 @@
 </center>
 
 <p align="center">
-<a href="https://github.com/NapoII/EZLog/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/github/downloads/NapoII/EZLog/total" alt="downloads/total">
+<a href="https://github.com/NapoII/nlog/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/github/downloads/NapoII/nlog/total" alt="downloads/total">
 </a>
 
-<a href="https://github.com/NapoII/EZLog/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/github/repo-size/NapoII/EZLog" alt="github/repo-size">
+<a href="https://github.com/NapoII/nlog/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/github/repo-size/NapoII/nlog" alt="github/repo-size">
 </a>
 
-<a href="https://github.com/NapoII/EZLog/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/NapoII/EZLog" alt="github/license">
+<a href="https://github.com/NapoII/nlog/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/NapoII/nlog" alt="github/license">
 </a>
 
-<a href="https://github.com/NapoII/EZLog/actions">
-    <img src="https://img.shields.io/github/last-commit/NapoII/EZLog" alt="github/last-commit">
+<a href="https://github.com/NapoII/nlog/actions">
+    <img src="https://img.shields.io/github/last-commit/NapoII/nlog" alt="github/last-commit">
 </a>
 
-<a href="https://github.com/NapoII/EZLog/issues">
-    <img src="https://img.shields.io/github/issues/NapoII/EZLog?style=plastic" alt="github/issues">
+<a href="https://github.com/NapoII/nlog/issues">
+    <img src="https://img.shields.io/github/issues/NapoII/nlog?style=plastic" alt="github/issues">
 </a>
 
-<a href="https://github.com/NapoII/EZLog/stargazers">
-    <img src="https://img.shields.io/github/stars/NapoII/EZLog?style=social" alt="github/stars">
+<a href="https://github.com/NapoII/nlog/stargazers">
+    <img src="https://img.shields.io/github/stars/NapoII/nlog?style=social" alt="github/stars">
 </a>
 
 <a href="https://discord.gg/g7EW4P65">
@@ -39,20 +39,20 @@
 </a>
 </p>
 
-EzLog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+"nlog"(Nice Log) is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 
-With "EzLog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
+With "nlog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
-In addition to its core functionality, "EzLog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs.
+In addition to its core functionality, "nlog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs.
 
-Overall, "EzLog" is a valuable tool for any Python developer looking to simplify their logging process and effectively monitor their applications. Whether you're working on a small hobby project or a large-scale enterprise application, "EzLog" can help you keep track of what's happening in your code and quickly identify and fix any issues that arise
+Overall, "nlog" is a valuable tool for any Python developer looking to simplify their logging process and effectively monitor their applications. Whether you're working on a small hobby project or a large-scale enterprise application, "nlog" can help you keep track of what's happening in your code and quickly identify and fix any issues that arise
 ## Running Locally
 
 This application requires Python 3.10.7.
 ```
-git clone https://github.com/NapoII/EZLog
+git clone https://github.com/NapoII/nlog
 pip install -r requirements.txt
-run Code EZLog.py
+run Code nlog.py
 ```
 
 ## Example
