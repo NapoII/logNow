@@ -299,7 +299,6 @@ class bcolors:
     BG_WHITE = '\033[38m'
 
     @staticmethod
-    
     def end():
         """
         This static method prints the ENDC escape sequence to reset color and formatting back to default.
