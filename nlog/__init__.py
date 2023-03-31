@@ -1,3 +1,6 @@
+from .functions import *
+from .nlog import *
+
 """
 nlog" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 

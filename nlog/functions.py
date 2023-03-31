@@ -5,7 +5,6 @@ With "nlog", developers can easily create custom log messages and output them to
 In addition to its core functionality, "nlog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
 import os
 import time
-from configparser import ConfigParser
 
 folder_path_nlog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
 config_dir = folder_path_nlog + "config.ini"
@@ -41,49 +40,6 @@ def get_os_name():
         return('Operating system not recognized')
 
 
-def read_config(config_dir, section, option):
-    """Reads a specific option from a config file in a specific section
-    Args:
-        config_dir (str): The path of the config file.
-        section (str): The section where the searched option is located.
-        option (str): The name of the searched option.
-
-    Returns:
-        str: The value of the searched option.
-
-    """
-    config = ConfigParser()
-    config.read(config_dir)
-    load_config = (config[section][option])
-
-    #print("Config geladen: [ "+(option) + " = " + (load_config)+" ]")
-
-    return load_config
-
-
-def write_config(config_dir, section, Key, option):
-    """Writes a specific option to a config file in a specific section.
-    Args:
-        config_dir (str): The path of the config file. section
-        (str): The section where the option is to be written. key
-        (str): The name of the option. option
-        (str): The value to be written for the option..
-
-    """
-    config = ConfigParser()
-    # update existing value
-    config.read(config_dir)
-    try:
-        config.add_section(section)
-    except:
-        pass
-    config.set(section, Key, option)  # Updating existing entry
-    with open(config_dir, 'w') as configfile:
-        config.write(configfile)
-    print("\nSetting change -> "+str(config_dir)+"\n" +
-          "["+str(section)+"]\n"+str(Key)+" = " + str(option)+"\n")
-
-
 def Folder_gen(Folder_Name, Folder_dir):
     """
     This function checks if a specified folder already exists in the specified directory. If it does not exist,
@@ -113,23 +69,6 @@ def Folder_gen(Folder_Name, Folder_dir):
         print("  ->   " + str(full_path))
     print("\n")
     return(full_path)
-
-
-def Read_File_Out(dir):
-    """his function reads the contents of a specified file and returns the output.
-
-    Args:
-    - dir (str): The directory path of the file to be read.
-
-    Returns:
-    - (str): The contents of the file
-    """
-    # Open the file and read its contents
-    with open(dir, 'r') as f:
-        output = f.read()
-
-    # Output the contents of the file
-    return(output)
 
 
 def Fill_Datei(dir, toFill, Attribut):
@@ -187,7 +126,7 @@ def TimeStemp():
     Returns:
         str: The generated timestamp.
     """
-    time_format = read_config(config_dir, "log_file", "time_format")
+    time_format = "default"
     if time_format == "default":
         time_format = "%d-%m-%Y_%H:%M:%S"
     TimeStemp = Date_Time = (time.strftime(time_format))

@@ -12,6 +12,15 @@ from functions import *
 
 
 # Pre var
+ascii = """  _                   ______ _ _      
+ | |                 |  ____(_) |     
+ | |     ___   __ _  | |__   _| | ___ 
+ | |    / _ \ / _` | |  __| | | |/ _ \
+ | |___| (_) | (_| | | |    | | |  __/
+ |______\___/ \__, | |_|    |_|_|\___|
+               __/ |                  
+              |___/                   
+"""
 filename = os.path.basename(sys.argv[0])
 file_path = os.path.dirname(sys.argv[0])
 folder_path_nlog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
@@ -21,14 +30,14 @@ User = os.getlogin()
 
 # If in the .ini log_folder_dir = default then log folder = file folder:
 config_dir = folder_path_nlog + "config.ini"
-log_folder_dir = read_config(config_dir, "folder", "log_folder_dir")
+log_folder_dir = "default"
 if str(log_folder_dir) == "default":
     log_folder_dir = file_path
 log_folder_dir = Folder_gen("log", log_folder_dir)
 
 Log_filename = f"Log_{File_name_with_time(filename)}"
 
-ascii = Read_File_Out(folder_path_nlog + "Log_top_img.ascii")
+
 lines = ascii.split('\n')
 len_a = 0
 while True:
