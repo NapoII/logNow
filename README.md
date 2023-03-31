@@ -10,11 +10,11 @@
 </center>
 
 <p align="center">
-<a href="https://github.com/NapoII/logNow/archive/refs/heads/main.zip">
+<a href="https://pypi.org/project/logNow/">
     <img src="https://img.shields.io/github/downloads/NapoII/logNow/total" alt="downloads/total">
 </a>
 
-<a href="https://github.com/NapoII/logNow/archive/refs/heads/main.zip">
+<a href="https://pypi.org/project/logNow/">
     <img src="https://img.shields.io/github/repo-size/NapoII/logNow" alt="github/repo-size">
 </a>
 
@@ -39,24 +39,49 @@
 </a>
 </p>
 
-"logNow"(Nice Log) is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
+"logNow" is a Python package created to simplify logging for developers working on Python applications. The package provides a simple logging function that allows developers to output log messages to a file with timestamps, instead of using the standard "print" statement.
 
 With "logNow", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
 In addition to its core functionality, "logNow" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs.
 
-Overall, "logNow" is a valuable tool for any Python developer looking to simplify their logging process and effectively monitor their applications. Whether you're working on a small hobby project or a large-scale enterprise application, "logNow" can help you keep track of what's happening in your code and quickly identify and fix any issues that arise
-## Running Locally
+Overall, "logNow" is a valuable tool for any Python developer looking to simplify their logging process and effectively monitor their applications. Whether you're working on a small hobby project or a large-scale enterprise application, "logNow" can help you keep track of what's happening in your code and quickly identify and fix any issues that arise.
+## Install
+<a href="https://pypi.org/project/logNow/">
+    <img src="https://pypi.org/static/images/logo-small.2a411bc6.svg" alt="https://pypi.org/project/logNow/
+    ">
 
-This application requires Python 3.10.7.
+</a>
+<a href="https://pypi.org/project/logNow/">https://pypi.org/project/logNow/</a>
+<p>
+
+```cmd
+pip install logNow
 ```
-git clone https://github.com/NapoII/logNow
-pip install -r requirements.txt
-run Code logNow.py
+### Use
+```.py
+# To use logNow, you only need to import and write log("a str")
+
+import logNow
+from logNow import log
+
+log("hello world")
+log("hello red world", "R")
+log("hello green world", "G")
+log("hello blue world", "B")
+
+
 ```
 
-## Example
-coming soon...
+## Output Example
+
+<a href="https://pypi.org/project/logNow/">
+    <img src="Readme_ex1.png" alt="github/stars">
+</a>
+<a href="https://pypi.org/project/logNow/">
+    <img src="Readme_ex2.png" alt="github/stars">
+</a>
+
 ## Lizenz
 
 MIT License
