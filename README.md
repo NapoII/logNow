@@ -6,7 +6,7 @@
 
 <center>
 
-# EZLog
+# nlog
 </center>
 
 <p align="center">
