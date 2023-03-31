@@ -26,11 +26,9 @@ if str(log_folder_dir) == "default":
     log_folder_dir = file_path
 log_folder_dir = Folder_gen("log", log_folder_dir)
 
-print(f"log_folder_dir: {log_folder_dir}")
 Log_filename = f"Log_{File_name_with_time(filename)}"
 
 ascii = Read_File_Out(folder_path_EZLog + "Log_top_img.ascii")
-print(ascii)
 lines = ascii.split('\n')
 len_a = 0
 while True:
@@ -66,12 +64,27 @@ def test():
     filename = os.path.basename(sys.argv[0])
     print("Der Name der auszuführenden Datei lautet: ", filename)
 
-def log(Log_input):
-    """Schreibt einen Eintrag in das Log-File und gibt ihn auf der Konsole aus.
+def log(Log_input, colour=None):
 
-    Args:
-        Log_input (str): Der Eintrag, der im Log-File und auf der Konsole ausgegeben werden soll.
+    colour = str(colour).lower()
 
-    """
-    Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
-    print(TimeStemp()+" --> " + Log_input+"\n")
+    if colour == "r" or colour == "red":
+        Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
+        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.RED +Log_input + bcolors.ENDC +"\n")
+    if colour == "g" or colour == "green":
+        Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
+        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.GREEN +Log_input + bcolors.ENDC +"\n")
+    if colour == "b" or colour == "blue":
+        Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
+        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.BLUE +Log_input + bcolors.ENDC +"\n")
+    if colour == "y" or colour == "yellow":
+        Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
+        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + bcolors.YELLOW +Log_input + bcolors.ENDC +"\n")
+    
+    if colour not in ["r", "red", "g","green","b","blue","y","yellow"]:
+
+        
+        
+        Fill_Datei(Log_File, TimeStemp()+" --> " + Log_input+"\n", "a")
+        print (bcolors.TIME + TimeStemp() +" --> " + bcolors.ENDC + Log_input +"\n")
+

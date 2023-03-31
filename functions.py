@@ -3,18 +3,16 @@
 With "EzLog", developers can easily create custom log messages and output them to a log file, allowing them to monitor the behavior of their applications and quickly identify any errors or issues that arise. The package provides several useful features, including support for multiple log levels, the ability to configure log formatting, and the option to output logs to the console in addition to the log file.
 
 In addition to its core functionality, "EzLog" is designed to be easy to use and configure. The package is well-documented, and the code is written in a modular and extensible manner, making it easy for developers to customize and extend its functionality to suit their needs."""
-
 import os
-from configparser import ConfigParser
 import time
+from configparser import ConfigParser
 
 folder_path_EZLog = os.path.abspath(os.path.dirname(__file__)) + os.path.sep
 config_dir = folder_path_EZLog + "config.ini"
 
 
 def get_os_name():
-    """
-    This function determines the name of the operating system running on a computer.
+    """This function determines the name of the operating system running on a computer.
 
     Returns:
     - If the operating system is Unix-based, the function returns the string "Unix-based".
@@ -45,7 +43,6 @@ def get_os_name():
 
 def read_config(config_dir, section, option):
     """Reads a specific option from a config file in a specific section
-
     Args:
         config_dir (str): The path of the config file.
         section (str): The section where the searched option is located.
@@ -55,19 +52,17 @@ def read_config(config_dir, section, option):
         str: The value of the searched option.
 
     """
-
     config = ConfigParser()
     config.read(config_dir)
     load_config = (config[section][option])
 
-    print("Config geladen: [ "+(option) + " = " + (load_config)+" ]")
+    #print("Config geladen: [ "+(option) + " = " + (load_config)+" ]")
 
     return load_config
 
 
 def write_config(config_dir, section, Key, option):
     """Writes a specific option to a config file in a specific section.
-
     Args:
         config_dir (str): The path of the config file. section
         (str): The section where the option is to be written. key
@@ -75,7 +70,6 @@ def write_config(config_dir, section, Key, option):
         (str): The value to be written for the option..
 
     """
-
     config = ConfigParser()
     # update existing value
     config.read(config_dir)
@@ -102,7 +96,7 @@ def Folder_gen(Folder_Name, Folder_dir):
      Returns:
      - (str): The full path of the checked/created folder
      """
-    print("Folder structure is checked and created if necessary...\n")
+    # print("Folder structure is checked and created if necessary...\n")
     folder = Folder_Name
     # dir = "~/"+str(Folder_dir)+"/"+str(folder)           # Specifies desired file path
 
@@ -112,8 +106,7 @@ def Folder_gen(Folder_Name, Folder_dir):
     full_path = os.path.normpath(full_path)
     # Checks file path for exsistance Ture/False
     if os.path.exists(full_path):
-        print("Folder structure already exists")
-        print("  ->   " + str(full_path))
+        print("Log file is stored in -->" + str(full_path))
     else:                                               # Creates folder if not available
         os.makedirs(full_path)
         print("The folder ["+folder+"] was created in the directory:")
@@ -129,7 +122,8 @@ def Read_File_Out(dir):
     - dir (str): The directory path of the file to be read.
 
     Returns:
-    - (str): The contents of the file"""
+    - (str): The contents of the file
+    """
     # Open the file and read its contents
     with open(dir, 'r') as f:
         output = f.read()
@@ -144,6 +138,7 @@ def Fill_Datei(dir, toFill, Attribut):
 
     Args:
     - dir (str): The directory path of the file to be written to.
+
     - toFill (str): The string to be written to the file.
     - Attribut (str): The attribute to open the file with, such as "w" for write or "a" for append.
 
@@ -164,6 +159,7 @@ def Create_TextFile(Text_File_name, save_path, Contents):
     Args:
         Text_File_name (str): The name of the text file.
         save_path (str): The path where the text file is to be saved.
+
         Inhalt (str): The content to be written to the text file.
 
     Returns:
@@ -174,7 +170,7 @@ def Create_TextFile(Text_File_name, save_path, Contents):
     if os.path.exists(complete_Path_Text):
         return complete_Path_Text
     else:
-        print("\nTextdatei ["+str(complete_Path_Text)+"] wird erstellt...")
+        print("Log file ["+str(complete_Path_Text)+"] \n")
         # Create file
         file1 = open(complete_Path_Text, "w")
         # toFile = input("Write what you want into the field")                   # File input def.
@@ -199,8 +195,7 @@ def TimeStemp():
 
 
 def time_stemp_to_file_str(str):
-    """
-    Converts a timestamp string in the format "yyyy-mm-dd_HH:MM:SS" to a file name string 
+    """Converts a timestamp string in the format "yyyy-mm-dd_HH:MM:SS" to a file name string 
     in the format "(SS.MM.HH)_dd-mm-yyyy". 
 
     Args:
@@ -219,8 +214,10 @@ def time_stemp_to_file_str(str):
             break
 
         item = str_list.pop()
+
         if ":" in item:
             item = item.replace(":", ".")
+
             item = f"({item})"
 
         full_str += f"{item}_"
@@ -242,3 +239,35 @@ def File_name_with_time(FileName):
     FullName = f"{time_stemp_to_file_str(Date)}_{FileName}"
 
     return FullName
+
+class bcolors:
+    TIME = '\033[90m'
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    
+    BG_RED = '\033[41m'
+    BG_GREEN = '\033[42m'
+    BG_YELLOW = '\033[43m'
+    BG_BLUE = '\033[44m'
+    BG_MAGENTA = '\033[45m'
+    BG_CYAN = '\033[46m'
+    BG_WHITE = '\033[47m'
+    BG_WHITE = '\033[38m'
+
+    @staticmethod
+    def end():
+        print(bcolors.ENDC)
