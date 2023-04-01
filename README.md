@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://pypi.org/project/logNow/">
-    <img src="https://img.shields.io/github/downloads/NapoII/logNow/total" alt="downloads/total">
+    <img src="https://img.shields.io/pypi/dm/logNow" alt="downloads/total">
 </a>
 
 <a href="https://pypi.org/project/logNow/">
