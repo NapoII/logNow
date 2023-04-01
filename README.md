@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/NapoII">
-    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_top.png"  alt=f"NapoII">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/README_img/Readme_top.png"  alt=f"NapoII">
 </a>
 </p>
 
@@ -72,10 +72,10 @@ log("hello blue world", "B")
 ## Output Example
 
 <a href="https://pypi.org/project/logNow/">
-    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_ex1.png" alt="github/stars">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/README_img/Readme_ex1.png" alt="github/stars">
 </a>
 <a href="https://pypi.org/project/logNow/">
-    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/Readme_ex2.png" alt="github/stars">
+    <img src="https://raw.githubusercontent.com/NapoII/logNow/main/README_img/Readme_ex2.png" alt="github/stars">
 </a>
 
 ## Lizenz
