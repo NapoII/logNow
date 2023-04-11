@@ -78,6 +78,13 @@ log("hello blue world", "B")
     <img src="https://raw.githubusercontent.com/NapoII/logNow/main/README_img/Readme_ex2.png" alt="github/stars">
 </a>
 
+## Youtube
+    
+<a href="https://www.youtube.com/shorts/F4DPTMW2Mcg">
+    <img src="https://i.imgur.com/G0JtrjB.png" alt="youtube.com/shorts" width="200">
+</a>
+    
+    
 ## Lizenz
 
 MIT License
