@@ -58,8 +58,7 @@ pip install logNow
 ```.py
 # To use logNow, you only need to import and write log("a str")
 
-import logNow
-from logNow import log
+from logNow import *
 
 log("hello world")
 log("hello red world", "R")
